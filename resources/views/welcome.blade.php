@@ -9,6 +9,7 @@
 
 @endphp
 
+@includeWhen(isset($users),'pages.header', ['name'=>'ajharul'])
 <ul>
 
     @foreach ($users as $user )
@@ -21,3 +22,5 @@
     @endforeach
 
 </ul>
+
+@include('pages.footer')
