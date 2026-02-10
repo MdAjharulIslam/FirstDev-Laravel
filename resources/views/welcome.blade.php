@@ -16,7 +16,7 @@
     @if($loop->even)
     <li style="color: red">{{$user}} </li>
     @else
-     <li >{{$user}} </li>
+     <li style="color: green" >{{$user}} </li>
     @endif
     @endforeach
 
