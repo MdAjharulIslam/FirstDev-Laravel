@@ -23,6 +23,14 @@ Route::get('/post/{id?}/comment/{commentId}', function($id, $commentId){
 });
 Route::get('/yeald',function(){
     return view('pages.hello');
+
+});
+
+Route::get('/users', function(){
+    $name = 'ajharul islam';
+// return view('pages.userpage', ['user'=>$name]);
+
+return view('pages.userpage')->with('user', $name);
 });
 
 Route::fallback(function(){
