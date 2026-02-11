@@ -21,6 +21,9 @@ Route::get('/about/{id?}' , function( $id = null){
 Route::get('/post/{id?}/comment/{commentId}', function($id, $commentId){
     return "<h1> post id: ".$id." </h1> <h1>comment id: ".$commentId." </h1>";
 });
+Route::get('/yeald',function(){
+    return view('pages.hello');
+});
 
 Route::fallback(function(){
     return "<h1>page not found </h1>";

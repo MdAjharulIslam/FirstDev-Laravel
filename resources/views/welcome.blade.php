@@ -22,5 +22,6 @@
     @endforeach
 
 </ul>
+@yield('content', 'hello')
 
 @include('pages.footer')
