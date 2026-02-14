@@ -52,9 +52,12 @@ use App\Http\controllers\TestController;
 // Route::get('/user/{id}',[PageController::class, 'showUser'])->name('user');
 // Route::get('/blog',[PageController::class, 'showBolg'])->name('blog');
 
+
 Route::controller(PageController::class)->group(function(){
 Route::get('/','showHome')->name('home');
+Route::get('/user', 'showAllUser')->name('allUsers');
 Route::get('/user/{id}', 'showUser')->name('user');
+
 Route::get('/blog', 'showBolg')->name('blog');
 });
 
