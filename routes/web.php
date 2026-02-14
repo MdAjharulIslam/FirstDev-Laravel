@@ -41,8 +41,8 @@ use Illuminate\Support\Facades\Route;
 
 // _________work with controller__________
 
-use App\Http\controllers\PageController;
-use App\Http\controllers\TestController;
+// use App\Http\controllers\PageController;
+// use App\Http\controllers\TestController;
 
 // Route::get('/', function(){
 //     return view('pages.header', ['name'=>"ajharul"]);
@@ -53,12 +53,12 @@ use App\Http\controllers\TestController;
 // Route::get('/blog',[PageController::class, 'showBolg'])->name('blog');
 
 
-Route::controller(PageController::class)->group(function(){
-Route::get('/','showHome')->name('home');
-Route::get('/user', 'showAllUser')->name('allUsers');
-Route::get('/user/{id}', 'showUser')->name('user');
+// Route::controller(PageController::class)->group(function(){
+// Route::get('/','showHome')->name('home');
+// Route::get('/user', 'showAllUser')->name('allUsers');
+// Route::get('/user/{id}', 'showUser')->name('user');
 
-Route::get('/blog', 'showBolg')->name('blog');
-});
+// Route::get('/blog', 'showBolg')->name('blog');
+// });
 
-Route::get('/testing', TestController::class);
+// Route::get('/testing', TestController::class);
