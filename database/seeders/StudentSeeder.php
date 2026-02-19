@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\student;
+use App\Models\Student;
 
 class StudentSeeder extends Seeder
 {
@@ -12,13 +12,13 @@ class StudentSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        for($i=0;$i<10;$i++){
-            student::create([
-                'name'=>fake()->name(),
-                'email'=>fake()->unique()->email()
-            ]);
-        }
+     {
+            //   for($i=0;$i<10;$i++){
+            //         student::create([
+            //             'name'=>fake()->name(),
+            //             'email'=>fake()->unique()->email()
+            //         ]);
+            //     }
 
     // $students = collect([
     //     [
@@ -36,11 +36,17 @@ class StudentSeeder extends Seeder
     // ]);
 
     // $students->each(function($student){
-    //   student::insert($student);
+    //   Student::insert($student);
     // });
-        // student::create([
+
+
+
+        // Student::create([
         //     'name'=>'ajharul islam',
         //     'email'=>'ajharul@gmail.com'
         // ]);
+
+        Student::factory(10)->create();
+        
     }
 }
