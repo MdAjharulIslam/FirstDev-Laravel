@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
 
 
 
-       Student::factory()->count(20)->create();
-
+      // Student::factory()->count(20)->create();
+         Student->factory(20)->create();
      }
 }
