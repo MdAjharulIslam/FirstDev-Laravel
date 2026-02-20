@@ -62,3 +62,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::get('/testing', TestController::class);
+
+
+
+//------------Quiry builder Routes-----------
+use App\Http\Controllers\StudentController;
+
+Route::get('/',[ StudentController::class, 'showStudents'] );
+Route::get('/add',[ StudentController::class, 'addStudent'] );
+Route::get('/update',[ StudentController::class, 'updateStudent'] );
+Route::get('/delete',[ StudentController::class, 'deleteStudent'] );
