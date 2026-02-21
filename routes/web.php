@@ -69,6 +69,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 
 Route::get('/',[ StudentController::class, 'showStudents'] );
-Route::get('/add',[ StudentController::class, 'addStudent'] );
+Route::post('/add',[ StudentController::class, 'addStudent'] )->name('addStudent');
 Route::get('/update',[ StudentController::class, 'updateStudent'] );
-Route::get('/delete',[ StudentController::class, 'deleteStudent'] );
+ Route::get('/delete',[ StudentController::class, 'deleteStudent'] );
+
+
+
+
+Route::view('/addStudent', 'pages.addStudent');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class StudentController extends Controller
 {
    public function showStudents(){
@@ -17,7 +18,7 @@ return view('pages.allStudent',['students'=>$students] );
  
  }
 
- public function addStudent(){
+ public function addStudent(Request $req){
     // $student = DB::table('students')->insert([
     //      'name'=>'ajharul islam jopy',
     //      'email'=>'ajharuli4400@gmail.com',
@@ -27,18 +28,31 @@ return view('pages.allStudent',['students'=>$students] );
 
 
     //for duplicate data
-    $student = DB::table('students')->insertOrIgnore([
-         'name'=>'ajharul islam jopy',
-         'email'=>'ajharuli4400@gmail.com',
+   //  $student = DB::table('students')->insertOrIgnore([
+   //       'name'=>'ajharul islam jopy',
+   //       'email'=>'ajharuli4400@gmail.com',
+   //       'updated_at'=>now(),
+   //       'created_at'=>now()
+   //  ]);
+   // if($student){
+   //  echo "<h1 > data successfully added</h1>";
+   // }else{
+   //   echo "<h1 > already email exist</h1>";
+   // }
+
+
+    $student = DB::table('students')->insert([
+         'name'=>$req->name,
+         'email'=>$req->email,
          'updated_at'=>now(),
          'created_at'=>now()
-    ]);
-   if($student){
+    ]);   
+    
+    if($student){
     echo "<h1 > data successfully added</h1>";
    }else{
      echo "<h1 > already email exist</h1>";
    }
-    
  }
 
 
