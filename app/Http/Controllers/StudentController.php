@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\DB;
 class StudentController extends Controller
 {
    public function showStudents(){
-    $students = DB::table('students')->select('id', 'name')->get();
+   //  $students = DB::table('students')->select('id', 'name')->get();
+   $students = DB::table('students')->simplePaginate(5);
      
     // return $students;
 //   dd($students);
