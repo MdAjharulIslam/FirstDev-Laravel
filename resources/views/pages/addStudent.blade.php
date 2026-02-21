@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <form action="{{route('addStudent')}}" method="POST">
+    <form action="{{route('addNewStudent')}}" method="POST">
     @csrf
     <label for="name">enter your name</label>
     <input type="text" name='name'>

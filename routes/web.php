@@ -68,8 +68,8 @@ use Illuminate\Support\Facades\Route;
 //------------Quiry builder Routes-----------
 use App\Http\Controllers\StudentController;
 
-Route::get('/',[ StudentController::class, 'showStudents'] );
-Route::post('/add',[ StudentController::class, 'addStudent'] )->name('addStudent');
+Route::get('/',[ StudentController::class, 'showStudents'] )->name('home');
+Route::post('/add',[ StudentController::class, 'addStudent'] )->name('addNewStudent');
 Route::get('/update',[ StudentController::class, 'updateStudent'] );
  Route::get('/delete',[ StudentController::class, 'deleteStudent'] );
 

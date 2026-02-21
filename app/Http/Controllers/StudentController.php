@@ -49,7 +49,7 @@ return view('pages.allStudent',['students'=>$students] );
     ]);   
     
     if($student){
-    echo "<h1 > data successfully added</h1>";
+    return redirect()->route('home');
    }else{
      echo "<h1 > already email exist</h1>";
    }
