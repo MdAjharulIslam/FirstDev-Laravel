@@ -67,5 +67,15 @@ return view('pages.allStudent',['students'=>$students] );
     $student = DB::table('students')->where('id', 21)->delete();
  }
 
+
+//  learn about join in query builders
+
+
+// public function showStudents(){
+//    $students = DB::table('students')
+//    ->join('cities', 'students.city' , '=' , 'cities.cId')
+//    ->get();
+// }
+
 }
    
