@@ -77,5 +77,16 @@ return view('pages.allStudent',['students'=>$students] );
 //    ->get();
 // }
 
+
+public function unonData(){
+
+$student = DB::table('students')->get();
+
+$lecturers = DB::table('lecturers')
+->union($student)->get();
+return $lecturers;
+}
+
+
 }
    
