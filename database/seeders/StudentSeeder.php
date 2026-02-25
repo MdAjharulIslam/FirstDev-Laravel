@@ -47,7 +47,20 @@ class StudentSeeder extends Seeder
         // ]);
 
         Student::factory(10)->create();
-        
+        // $students = Student::insert([
+    //     [
+    //         'name'=>'ajharul islam',
+    //         'email'=>'ajharul@gmail.com'
+    //     ],
+    //     [
+    //         'name'=>'kamrul islam',
+    //         'email'=>'kamrul@gmail.com'
+    //     ],
+    //     [
+    //         'name'=>'maria islam',
+    //         'email'=>'maria@gmail.com'
+    //     ]
+    // ]);
     }
 }
 
