@@ -79,6 +79,12 @@ use Illuminate\Support\Facades\Route;
 // Route::view('/addStudent', 'pages.addStudent');
 
 
-Route::get('/', function(){
-    return "hello world"; 
-});
+// Route::get('/', function(){
+//     return "hello world"; 
+// });
+
+
+
+use App\Http\Controllers\ResourceController;
+
+Route::resource('resources', ResourceController::class);
