@@ -79,9 +79,9 @@ use Illuminate\Support\Facades\Route;
 // Route::view('/addStudent', 'pages.addStudent');
 
 
-// Route::get('/', function(){
-//     return "hello world"; 
-// });
+Route::get('/', function(){
+    return "hello world"; 
+});
 
 
 
