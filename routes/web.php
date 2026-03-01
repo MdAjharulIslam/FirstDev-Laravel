@@ -66,14 +66,19 @@ use Illuminate\Support\Facades\Route;
 
 
 //------------Quiry builder Routes-----------
-use App\Http\Controllers\StudentController;
+// use App\Http\Controllers\StudentController;
 
-Route::get('/',[ StudentController::class, 'showStudents'] )->name('home');
-Route::post('/add',[ StudentController::class, 'addStudent'] )->name('addNewStudent');
-Route::get('/update',[ StudentController::class, 'updateStudent'] );
- Route::get('/delete',[ StudentController::class, 'deleteStudent'] );
-
-
+// Route::get('/',[ StudentController::class, 'showStudents'] )->name('home');
+// Route::post('/add',[ StudentController::class, 'addStudent'] )->name('addNewStudent');
+// Route::get('/update',[ StudentController::class, 'updateStudent'] );
+//  Route::get('/delete',[ StudentController::class, 'deleteStudent'] );
 
 
-Route::view('/addStudent', 'pages.addStudent');
+
+
+// Route::view('/addStudent', 'pages.addStudent');
+
+
+Route::get('/', function(){
+    return "hello world"; 
+});
